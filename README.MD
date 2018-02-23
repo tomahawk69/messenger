@@ -1,21 +1,22 @@
-Simple backend for a twitter-like messenger
+#Simple backend for a twitter-like messenger
+
+## Running
 
 To run execute
-mvn clean spring-boot:run
+_mvn clean spring-boot:run_
 or
-mvn clean package
+_mvn clean package_
 and next
-java -jar target/backend-0.0.1-SNAPSHOT.jar
+_java -jar target/backend-0.0.1-SNAPSHOT.jar_
 
 
 By default runs on 8080 port. To change update application.properties:
-server.port = 8081 
-or pass it in a command line:
--Dserver.port = 8081
-
+_server.port = 8081_ 
+or pass it in a command line when running jar:
+_-Dserver.port = 8081_
 
   
-Rest API description:
+##Rest API description:
 
 POST /post/{user} BODY: message 
 create a post; returns a new post
@@ -44,3 +45,13 @@ Return a set of users which follow passed user
 GET /followings/{user}
 Return a set of followed users of passed user 
 
+
+##Note that there are:
+
+- no "delete user" function
+
+- user is not an entity, just String
+
+- no unit tests, only end-to-end
+
+- no swagger or rest docs to expose api  
