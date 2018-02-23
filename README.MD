@@ -1,4 +1,4 @@
-#Simple backend for a twitter-like messenger
+# Simple backend for a twitter-like messenger
 
 ## Running
 
@@ -16,7 +16,7 @@ or pass it in a command line when running jar:
 _-Dserver.port = 8081_
 
   
-##Rest API description:
+## Rest API description:
 
 POST /post/{user} BODY: message 
 create a post; returns a new post
@@ -46,7 +46,7 @@ GET /followings/{user}
 Return a set of followed users of passed user 
 
 
-##Note that there are:
+## Note that there are:
 
 - no "delete user" function
 
